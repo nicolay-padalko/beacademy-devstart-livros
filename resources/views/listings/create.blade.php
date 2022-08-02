@@ -9,20 +9,20 @@
             @csrf
             <div class="mb-6">
                 <label for="company" class="inline-block text-lg mb-2">Titulo Livro</label>
-                <input type="text" class="border border-gray-200 rounded p-2 w-full" name="company"
-                       value="{{old('company')}}"/>
+                <input type="text" class="border border-gray-200 rounded p-2 w-full" name="title"
+                       value="{{old('title')}}"/>
 
-                @error('company')
+                @error('title')
                 <p class="text-red-500 text-xs mt-1">{{$message}}</p>
                 @enderror
             </div>
 
             <div class="mb-6">
                 <label for="title" class="inline-block text-lg mb-2">Autor</label>
-                <input type="text" class="border border-gray-200 rounded p-2 w-full" name="title"
-                        value="{{old('title')}}"/>
+                <input type="text" class="border border-gray-200 rounded p-2 w-full" name="author"
+                        value="{{old('author')}}"/>
 
-                @error('title')
+                @error('author')
                 <p class="text-red-500 text-xs mt-1">{{$message}}</p>
                 @enderror
             </div>
@@ -74,12 +74,12 @@
             </div>
 
             <div class="mb-6">
-                <label for="logo" class="inline-block text-lg mb-2">
+                <label for="cover" class="inline-block text-lg mb-2">
                     Capa Livro
                 </label>
-                <input type="file" class="border border-gray-200 rounded p-2 w-full" name="logo"/>
+                <input type="file" class="border border-gray-200 rounded p-2 w-full" name="cover"/>
 
-                @error('logo')
+                @error('cover')
                 <p class="text-red-500 text-xs mt-1">{{$message}}</p>
                 @enderror
             </div>

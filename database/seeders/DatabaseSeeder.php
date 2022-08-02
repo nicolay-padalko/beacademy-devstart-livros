@@ -26,5 +26,7 @@ class DatabaseSeeder extends Seeder
          Listing::factory(6)->create([
              'user_id' => $user->id
          ]);
+
+//        Listing::factory(10)->create();
     }
 }

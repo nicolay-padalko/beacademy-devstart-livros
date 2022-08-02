@@ -17,13 +17,13 @@ class ListingFactory extends Factory
     public function definition()
     {
         return [
-            'title' => $this->faker->sentence(),
+            'author' => $this->faker->name(),
             'tags' => 'ficção, policial, romance',
-            'company' => $this->faker->company(),
+            'title' => $this->faker->sentence(),
             'email' => $this->faker->companyEmail(),
             'website' => $this->faker->url(),
             'location' => $this->faker->city(),
-            'description' => $this->faker->paragraph(3),
+            'description' => $this->faker->paragraph(2),
         ];
     }
 }

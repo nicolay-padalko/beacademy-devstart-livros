@@ -16,13 +16,13 @@ return new class extends Migration
         Schema::create('listings', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
-            $table->string('title');
-            $table->string('logo')->nullable();
+            $table->string('author');
+            $table->string('cover')->nullable();
             $table->string('tags');
-            $table->string('company');
+            $table->string('title');
             $table->string('location');
             $table->string('email');
-            $table->string('website');
+            $table->string('website')->nullable();;
             $table->string('description');
             $table->timestamps();
         });

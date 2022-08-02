@@ -10,20 +10,20 @@
             @method('PUT')
             <div class="mb-6">
                 <label for="company" class="inline-block text-lg mb-2">Nome do livro</label>
-                <input type="text" class="border border-gray-200 rounded p-2 w-full" name="company"
-                       value="{{$listing->company}}"/>
+                <input type="text" class="border border-gray-200 rounded p-2 w-full" name="title"
+                       value="{{$listing->title}}"/>
 
-                @error('company')
+                @error('title')
                 <p class="text-red-500 text-xs mt-1">{{$message}}</p>
                 @enderror
             </div>
 
             <div class="mb-6">
                 <label for="title" class="inline-block text-lg mb-2">Autor</label>
-                <input type="text" class="border border-gray-200 rounded p-2 w-full" name="title"
-                       placeholder="Example: Senior Laravel Developer" value="{{$listing->title}}"/>
+                <input type="text" class="border border-gray-200 rounded p-2 w-full" name="author"
+                       placeholder="Example: Senior Laravel Developer" value="{{$listing->author}}"/>
 
-                @error('title')
+                @error('author')
                 <p class="text-red-500 text-xs mt-1">{{$message}}</p>
                 @enderror
             </div>
@@ -78,11 +78,11 @@
                 <label for="logo" class="inline-block text-lg mb-2">
                     Capa Livro
                 </label>
-                <input type="file" class="border border-gray-200 rounded p-2 w-full" name="logo"/>
+                <input type="file" class="border border-gray-200 rounded p-2 w-full" name="cover"/>
 
                 <img class="w-48 mr-6 mb-6" src="{{$listing->logo ? asset ('storage/' . $listing->logo) : asset('images/no-image.png')}}" alt=""/>
 
-                @error('logo')
+                @error('cover')
                 <p class="text-red-500 text-xs mt-1">{{$message}}</p>
                 @enderror
             </div>

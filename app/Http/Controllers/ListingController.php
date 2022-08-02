@@ -33,17 +33,17 @@ class ListingController extends Controller
     public function store(Request $request)
     {
         $formFields = $request->validate([
-            'title' => 'required',
-            'company' => ['required', Rule::unique('listings', 'company')],
+            'author' => 'required',
+            'title' => ['required', Rule::unique('listings', 'title')],
             'location' => 'required',
-            'website' => 'required',
+            'website',
             'email' => ['required', 'email'],
             'tags' => 'required',
             'description' => 'required'
         ]);
 
-        if($request->hasFile('logo')) {
-            $formFields['logo'] = $request->file('logo')->store('logos', 'public');
+        if($request->hasFile('cover')) {
+            $formFields['cover'] = $request->file('cover')->store('covers', 'public');
         }
 
         $formFields['user_id'] = auth()->id();
@@ -63,17 +63,17 @@ class ListingController extends Controller
             abort(403, 'Unauthorized Action');
         }
         $formFields = $request->validate([
-            'title' => 'required',
-            'company' => ['required'],
+            'author' => 'required',
+            'title' => ['required'],
             'location' => 'required',
-            'website' => 'required',
+            'website',
             'email' => ['required', 'email'],
             'tags' => 'required',
             'description' => 'required'
         ]);
 
-        if($request->hasFile('logo')) {
-            $formFields['logo'] = $request->file('logo')->store('logos', 'public');
+        if($request->hasFile('cover')) {
+            $formFields['cover'] = $request->file('cover')->store('covers', 'public');
         }
 
         $listing->update($formFields);
