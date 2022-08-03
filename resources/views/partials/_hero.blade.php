@@ -10,7 +10,7 @@
             Ache ou disponibilize livros para trocar.
         </p>
         <div>
-            <a href="register.html"
+            <a href="/register"
                class="inline-block border-2 border-white text-white py-2 px-4 rounded-xl uppercase mt-2 hover:text-black hover:border-black">Registre para postar livros</a>
         </div>
     </div>

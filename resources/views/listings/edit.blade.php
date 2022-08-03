@@ -80,7 +80,7 @@
                 </label>
                 <input type="file" class="border border-gray-200 rounded p-2 w-full" name="cover"/>
 
-                <img class="w-48 mr-6 mb-6" src="{{$listing->logo ? asset ('storage/' . $listing->logo) : asset('images/no-image.png')}}" alt=""/>
+                <img class="w-48 mr-6 mb-6" src="{{$listing->cover ? asset ('storage/' . $listing->cover) : asset('images/no-image.png')}}" alt=""/>
 
                 @error('cover')
                 <p class="text-red-500 text-xs mt-1">{{$message}}</p>
